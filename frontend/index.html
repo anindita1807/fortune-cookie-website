@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8ed">
+  <title>Little Fortune — Fortune Cookie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">✳</span> little fortune</a>
+    <span class="top-note">A tiny pause for a little wonder</span>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <div class="eyebrow"><span></span> YOUR MOMENT OF MAGIC</div>
+      <h1>A little mystery.<br><em>A little meaning.</em></h1>
+      <p class="lead">Take a breath, make a wish, and let the universe leave you a tiny note.</p>
+      <div class="cookie-stage">
+        <div class="sparkle sparkle-a">✦</div>
+        <div class="sparkle sparkle-b">✧</div>
+        <button id="cookieBtn" class="cookie-button" aria-label="Open your fortune cookie">
+          <span class="cookie-shadow"></span>
+          <span class="cookie" aria-hidden="true">
+            <span class="cookie-fold"></span>
+            <span class="cookie-crease"></span>
+          </span>
+          <span class="press-hint">TAP TO CRACK</span>
+        </button>
+      </div>
+      <p class="tiny-note">No pressure. Just a little perspective.</p>
+    </section>
+
+    <section class="fortune-panel" aria-live="polite">
+      <div class="panel-top"><span class="panel-icon">☼</span><span>YOUR DAILY FORTUNE</span><span class="panel-line"></span></div>
+      <div id="emptyState" class="empty-state">
+        <div class="quote-mark">“</div>
+        <h2>Your fortune is waiting.</h2>
+        <p>Click the cookie and discover the message meant for this moment.</p>
+      </div>
+      <div id="fortuneState" class="fortune-state hidden">
+        <p class="fortune-label">A NOTE FOR YOU</p>
+        <h2 id="fortuneText"></h2>
+        <p id="fortuneLucky" class="lucky"></p>
+        <div class="actions">
+          <button id="saveBtn" class="secondary-btn">♡ Save</button>
+          <button id="copyBtn" class="secondary-btn">↗ Copy</button>
+          <button id="anotherBtn" class="primary-btn">Another fortune <span>→</span></button>
+        </div>
+      </div>
+      <div class="panel-bottom"><span>✦</span> THE RIGHT WORDS FIND YOU AT THE RIGHT TIME</div>
+    </section>
+  </main>
+
+  <section class="saved-section">
+    <div class="saved-heading"><div><p class="eyebrow">YOUR LITTLE COLLECTION</p><h2>Fortunes to keep</h2></div><span id="savedCount" class="count">0 SAVED</span></div>
+    <div id="savedList" class="saved-list"><p class="saved-empty">Your favourite fortunes will appear here.</p></div>
+  </section>
+
+  <footer><span>little fortune ✳</span><span>Made for curious minds and hopeful hearts.</span></footer>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
